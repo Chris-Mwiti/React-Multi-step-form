@@ -1,0 +1,293 @@
+:root{
+    --border-purple: #7b0af5;
+    --gray:#dddedd;
+    --border-gray: #afb1b0;
+    --primary-text-color: #061462;
+    --secondary-text-color: #7b7a7b;
+}
+
+/* Form styling */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 70%;
+    margin: 20px;
+    padding: 20px 70px;
+}
+
+form >.title{
+    color: var(--primary-text-color);
+    font-size: 30px;
+}
+
+form >.subtitle{
+    color: #9b9b9b;
+    font-size: 18px;
+}
+
+/* Personal Info element styling */
+.input-container{
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label-container{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.label-container > label{
+    color: var(--primary-text-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.label-container > .error-message{
+    display: none;
+}
+.label-container>.error-message.active{
+    display: flex;
+    color: red;
+    font-size: 18px;
+}
+.input >input{
+    min-width: 400px;
+    width: 550px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #9b9b9b;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.input>input:focus{
+    outline: 2px solid var(--primary-text-color);
+}
+
+.input>input.active{
+    border-color: red;
+    outline: none;
+}
+
+.btn-next{
+    padding: 10px 5px;
+    background: var(--primary-text-color);
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Plan Info */
+
+.radio-container{
+    width: 100%;
+    height: 100%;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.cards-container > ul{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.card-container{
+    position: relative;
+    border: 2px solid var(--border-gray);
+    margin-top: 50px ;
+    border-radius: 8px;
+    width: 200px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+}
+
+.radio-btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.radio-btn:checked + .card-option{
+    border: 2px solid var(--border-purple);
+    border-radius: 8px;
+    background: var(--gray);
+}
+.card-option{
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+    width: inherit;
+    height: inherit;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+.plan-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.plan-title{
+    color: var(--primary-text-color);
+}
+.price-tag{
+    color: var(--secondary-text-color);
+}
+.discount{
+    color: var(--primary-text-color);
+    font-weight: bold;
+}
+.no-discount{
+    display: none;
+}
+
+/* Timeline */
+
+.toggle-container{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 30px auto;
+    background: #f4f4f4
+}
+
+.timeline-container{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.timeline > input{
+    visibility: hidden;
+}
+.timeline > label{
+    font-weight: bold;
+    color: #7b7a7b;
+    cursor: pointer;
+}
+
+label.active{
+    color: var(--primary-text-color);
+    font-size: 18px;
+}
+
+.btn-container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-container >  button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.next-btn{
+    background: var(--primary-text-color);
+    color: white;
+}
+
+
+/* Adds On  */
+
+.adds-container{
+    width: 100%;
+    height: 100%;
+}
+
+.checkboxes-container{
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-container{
+    width: 600px;
+    border: 2px solid var(--border-purple);
+    border-radius: 4px;
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+}
+
+.checkbox-container:hover{
+    background: var(--gray);
+}
+
+.checkbox-container > input{
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-container > label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 7PX;
+}
+
+.detail-title{
+    color: (var(--primary-text-color));
+}
+.detail{
+    color: var(--border-gray);
+}
+.add-price{
+    color: var(--border-purple)
+}
+
+
+
